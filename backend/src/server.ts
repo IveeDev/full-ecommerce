@@ -2,7 +2,6 @@ import app from "@/app";
 import { createServer } from "http";
 import { ENV } from "@/config/env";
 import { connectDB } from "@/config/db";
-import { clerkMiddleware } from "@clerk/express";
 
 const startServer = async () => {
   try {
