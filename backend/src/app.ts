@@ -4,9 +4,11 @@ import { ENV } from "./config/env";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
+import { clerkMiddleware } from "@clerk/express";
 
 const app = express();
 
+app.use(clerkMiddleware());
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
